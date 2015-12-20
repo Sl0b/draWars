@@ -1,18 +1,19 @@
 <template name="home">
   <div class="container">
+
     <div class="row text-center">
-      <h1>Salons Publics</h1>
-      <div class="col-md-6">
-        <a href="{{pathFor 'public1'}}">Public 1</a>
-      </div>
-      <div class="col-md-6">
-        <a href="{{pathFor 'public2'}}">Public 2</a>s
-      </div>
+      <h1 class="col-md-12">Salons Publics</h1>
+      {{ #each pbgames }}
+        {{ > card }}
+      {{ /each }}
     </div>
-    <div class="row">
-      <div class="text-center">
-        <h1>Salon Privés</h1>
-      </div>
+
+    <div class="row text-center">
+      <h1 class="col-md-12">Salon Privés</h1>
+      {{ #each pvgames }}
+        {{ > card }}
+      {{ /each }}
     </div>
+
   </div>
 </template>

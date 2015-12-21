@@ -9,6 +9,7 @@ Meteor.methods({
 
     Games.insert({
       name: data.name,
+      password: data.password,
       players: [Meteor.user().username],
       private: true,
     });

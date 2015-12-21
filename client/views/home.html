@@ -1,6 +1,24 @@
 <template name="home">
   <div class="container">
 
+    <div class="modal fade bs-example-modal-sm" id="new-game-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <form id="newGame">
+            <div class="form-group">
+              <label for="name">Nom de la partie</label>
+              <input type="text" class="form-control" name="name" id="name" placeholder="Nom">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <div class="row text-center">
       <h1 class="col-md-12">Salons Publics</h1>
       {{ #each pbgames }}
@@ -13,6 +31,9 @@
       {{ #each pvgames }}
         {{ > card }}
       {{ /each }}
+      <div class="col-md-4 new" data-toggle="modal" data-target=".bs-example-modal-sm">
+        <h3>Créer salon privé</h3>
+      </div>
     </div>
 
   </div>

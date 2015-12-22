@@ -4,7 +4,7 @@ Deps.autorun(function (c) {
   if (Meteor.userId()) {
     try {
       UserStatus.startMonitor({
-        threshold: 10000,
+        threshold: 50000,
         interval: 10000,
         idleOnBlur: false
       })

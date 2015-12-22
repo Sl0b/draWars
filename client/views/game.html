@@ -1,9 +1,11 @@
 <template name="game">
   <div class="container">
     <div class="players">
-      {{ #each thisGame.players }}
-        {{ this }}
-      {{ /each }}
+      <ul>
+        {{ #each thisGame.players }}
+        <li>{{ this }}</li>
+        {{ /each }}
+      </ul>
     </div>
   </div>
 </template>

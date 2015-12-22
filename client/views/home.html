@@ -13,7 +13,21 @@
               <label for="password">Password</label>
               <input type="password" class="form-control" name="password" id="password" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default">Créer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade bs-example-modal-sm" id="password-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <form id="password-game">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password" id="passwordG" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-default">Entrer</button>
           </form>
         </div>
       </div>
@@ -27,11 +41,12 @@
     </div>
 
     <div class="row text-center">
-      <h1 class="col-md-12">Salon Privés</h1>
+      <h1 class="col-md-12">Salons Privés</h1>
+      <p>Toutes les minutes, les salons privés sans aucun joueurs sont supprimés.</p>
       {{ #each pvgames }}
         {{ > card }}
       {{ /each }}
-      <div class="col-md-4 new" data-toggle="modal" data-target=".bs-example-modal-sm">
+      <div class="col-md-4 new" data-toggle="modal" data-target="#new-game-modal">
         <h3>Créer salon privé</h3>
       </div>
     </div>

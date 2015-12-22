@@ -1,3 +1,19 @@
+if (Meteor.users.find().count() === 0) {
+  var id = Accounts.createUser({
+    username: "Sl0b",
+    password: "Test1",
+  });
+
+  console.log("Added Sl0b user...");
+
+  var id = Accounts.createUser({
+    username: "test",
+    password: "Test1",
+  });
+
+  console.log("Added test user...");
+}
+
 var gamesSeed = [
   {
     name: 'Public 1',
@@ -16,6 +32,7 @@ var gamesSeed = [
   },
   {
     name: 'Private 1',
+    password: 1234,
     players: ['Sl0b'],
     private: true,
   },

@@ -12,3 +12,13 @@ UserStatus.events.on("connectionIdle", function(fields) {
     }
   }
 })
+
+Meteor.setInterval(function() {
+  var games = Games.find({private: true}).fetch();
+
+  for (var i = 0; i < games.length; i++) {
+    if (games[i].players.length === 0) {
+      Games.remove({_id: games[i]._id});
+    }
+  }
+}, 60000);

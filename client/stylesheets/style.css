@@ -14,3 +14,13 @@ body {
 #content {
   padding-top: 70px;
 }
+
+.players {
+  position: absolute;
+  left: 0;
+  top: 48px;
+  padding-top: 15px;
+  height: 100%;
+  width: 250px;
+  border-right: 1px solid #e7e7e7;
+}

@@ -18,21 +18,25 @@ var gamesSeed = [
   {
     name: 'Public 1',
     players: [],
+    ongoing: false,
     private: false,
   },
   {
     name: 'Public 2',
     players: [],
+    ongoing: false,
     private: false,
   },
   {
     name: 'Public 3',
     players: [],
+    ongoing: false,
     private: false,
   },
   {
     name: 'Private 1',
     password: 1234,
+    ongoing: false,
     players: ['Sl0b'],
     private: true,
   },

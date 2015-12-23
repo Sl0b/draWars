@@ -1,6 +1,6 @@
 Meteor.subscribe("userStatus");
 
-Deps.autorun(function (c) {
+Tracker.autorun(function (c) {
   if (Meteor.userId()) {
     try {
       UserStatus.startMonitor({
